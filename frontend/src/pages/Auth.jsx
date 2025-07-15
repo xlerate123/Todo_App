@@ -25,7 +25,7 @@ const Auth = () => {
           password: form.password,
         });
         localStorage.setItem('token', res.data.token);
-        navigate('/todos');
+        window.location.href = '/todos';
       } else {
         await API.post('/auth/signup', form);
         alert('Signup successful! Please log in.');
