@@ -25,7 +25,6 @@ const Auth = () => {
           password: form.password,
         });
         localStorage.setItem('token', res.data.token);
-        localStorage.setItem('user', JSON.stringify(res.data.user));
         navigate('/todos');
       } else {
         await API.post('/auth/signup', form);

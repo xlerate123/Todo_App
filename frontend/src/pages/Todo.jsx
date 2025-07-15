@@ -6,7 +6,6 @@ import TodoList from '../components/TodoList';
 const Todo = () => {
   const [todos, setTodos] = useState([]);
   const [task, setTask] = useState('');
-  const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -51,7 +50,7 @@ const Todo = () => {
       <div className="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-md">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">
-            {user?.name}'s Todos
+            My Todos
           </h2>
           <button
             onClick={handleLogout}
